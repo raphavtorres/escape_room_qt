@@ -14,6 +14,3 @@ git remote add origin https://github.com/raphavtorres/escape_room_qt.git ((copia
 
 git branch -M {branch_name}
 git push origin {branch_name}
-
-
-Redebtc3 - ETS_BTIA_3
