@@ -1,0 +1,9 @@
+pip install pyqt5-tools
+pyuic5 -x {name}.ui -0 {name}.py
+
+
+
+git init
+git config user.name
+git config user.name "raphavtorres"
+git config user.name/email ""
