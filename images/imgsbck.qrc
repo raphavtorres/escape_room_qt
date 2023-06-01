@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="background">
+    <file>download (1).jfif</file>
+    <file>download.jfif</file>
+    <file>futuristic_plants_room_img.webp</file>
+    <file>gamer_room_img.png</file>
+    <file>plant_room_img.jfif</file>
+    <file>plant_room_img[.png</file>
+    <file>portal.gif</file>
+  </qresource>
+</RCC>

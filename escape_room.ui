@@ -51,7 +51,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>images/Midjourney Isometric Game Art_ Prompts &amp; Guide - AiTuts.webp</pixmap>
+     <pixmap resource="images/imgsbck.qrc">:/background/futuristic_plants_room_img.webp</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -59,6 +59,8 @@
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images/imgsbck.qrc"/>
+ </resources>
  <connections/>
 </ui>
