@@ -6,9 +6,19 @@ class MyWindow(Ui_MainWindow):
         self.setupUi(MainWindow)
 
 
+stylesheet = """
+    MainWindow {
+        background-image: url("C:\\Users\\ct67ca\\Desktop\\escape_room_qt\\teste.jpg");
+        background-repeat: no-repeat; 
+        background-position: center;
+    }
+"""
+
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
+    app.setStyleSheet(stylesheet)
     MainWindow = QtWidgets.QMainWindow()
     # ui = Ui_MainWindow()
     # ui.setupUi(MainWindow)
