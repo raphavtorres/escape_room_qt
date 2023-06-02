@@ -67,6 +67,19 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="teste_lb">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>390</y>
+      <width>111</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>

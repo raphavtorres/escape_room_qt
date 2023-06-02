@@ -31,6 +31,9 @@ class Ui_MainWindow(object):
         self.open_pc_btn.setStyleSheet("background-color: rgba(0,0,0,0);")
         self.open_pc_btn.setText("")
         self.open_pc_btn.setObjectName("open_pc_btn")
+        self.teste_lb = QtWidgets.QLabel(self.centralwidget)
+        self.teste_lb.setGeometry(QtCore.QRect(380, 390, 111, 91))
+        self.teste_lb.setObjectName("teste_lb")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -39,6 +42,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.teste_lb.setText(_translate("MainWindow", "TextLabel"))
 
 
 if __name__ == "__main__":
