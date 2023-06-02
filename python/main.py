@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from escape_room import Ui_MainWindow
+from python.escape_room import Ui_MainWindow
 
 class MyWindow(Ui_MainWindow):
     def __init__(self, MainWindow):
