@@ -20,7 +20,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="bg_img_lb">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -45,7 +45,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../images/gamer_room_img.png</pixmap>
+     <pixmap>images/gamer_room_img.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -69,6 +69,8 @@
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images/imgsbck.qrc"/>
+ </resources>
  <connections/>
 </ui>

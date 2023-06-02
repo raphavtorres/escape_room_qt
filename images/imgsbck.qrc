@@ -1,8 +1,7 @@
 <RCC>
   <qresource prefix="background">
-    <file>plant_room_img.png</file>
     <file>futuristic_plants_room_img.webp</file>
     <file>gamer_room_img.png</file>
-    <file>portal.gif</file>
+    <file>plant_room_img.png</file>
   </qresource>
 </RCC>

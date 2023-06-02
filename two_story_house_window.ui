@@ -51,7 +51,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="images/imgsbck.qrc">:/background/futuristic_plants_room_img.webp</pixmap>
+     <pixmap resource="../images/imgsbck.qrc">:/background/futuristic_plants_room_img.webp</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -60,7 +60,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="images/imgsbck.qrc"/>
+  <include location="../images/imgsbck.qrc"/>
  </resources>
  <connections/>
 </ui>
