@@ -51,7 +51,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>images/plant_room_img[.png</pixmap>
+     <pixmap resource="images/imgsbck.qrc">:/background/plant_room_img.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -59,6 +59,8 @@
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images/imgsbck.qrc"/>
+ </resources>
  <connections/>
 </ui>
