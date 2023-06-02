@@ -11,6 +11,8 @@ pyuic5 -x {name}.ui -0 {name}.py
 pyuic5 -x gamer_room_window.ui -o gamer_room_window.py
 pyuic5 -x plant_livingroom_window.ui -o plant_livingroom_window.py
 pyuic5 -x two_story_house_window.ui -o two_story_house_window.py
+pyuic5 -x computer_screen_window.ui -o computer_screen_window.py
+
 pyrcc5 -o files_rc.py files_rc.qrc
 
 

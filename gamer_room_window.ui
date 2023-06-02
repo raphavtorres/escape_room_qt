@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>GamerRoom</class>
+ <widget class="QMainWindow" name="GamerRoom">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -45,7 +45,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../images/gamer_room_img.png</pixmap>
+     <pixmap resource="files_rc.qrc">:/background/images/gamer_room_img.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -67,21 +67,10 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="teste_lb">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>390</y>
-      <width>111</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-   </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="files_rc.qrc"/>
+ </resources>
  <connections/>
 </ui>

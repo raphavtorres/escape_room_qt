@@ -1,9 +1,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-import interface.gamer_room_window as g_room
-import interface.plant_livingroom_window as p_liv_room
+from gamer_room_window import Ui_GamerRoom
+from computer_screen_window import Ui_ComputerScreen
 
-class MyWindow(g_room.Ui_MainWindow):
+
+class GamerRoom(Ui_GamerRoom):
     def __init__(self, MainWindow):
+        self.MainWindow = MainWindow
         self.setupUi(MainWindow)
         self.UiComponents()
 
@@ -11,33 +13,30 @@ class MyWindow(g_room.Ui_MainWindow):
         self.open_pc_btn.clicked.connect(self.open_window)
 
     def open_window(self):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = SecondWindow(window)
-        self.window.show()
+        ComputerScreen(MainWindow)
         self.MainWindow.close()
+        MainWindow.show()
 
 
-class SecondWindow(p_liv_room.Ui_MainWindow):
+class ComputerScreen(Ui_ComputerScreen):
     def __init__(self, MainWindow):
+        self.MainWindow = MainWindow
         self.setupUi(MainWindow)
+        self.UiComponents()
 
+    def UiComponents(self):
+        self.back_to_room_btn.clicked.connect(self.open_window)
 
-
-# stylesheet = """
-#     MainWindow {
-#         background-image: url("C:\\Users\\ct67ca\\Desktop\\escape_room_qt\\teste.jpg");
-#         background-repeat: no-repeat; 
-#         background-position: center;
-#     }
-# """
+    def open_window(self):
+        GamerRoom(MainWindow)
+        self.MainWindow.close()
+        MainWindow.show()    
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    # app.setStyleSheet(stylesheet)
     MainWindow = QtWidgets.QMainWindow()
-    window = MyWindow(MainWindow)
-
+    window = GamerRoom(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
