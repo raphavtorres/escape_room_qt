@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import files_rc
 
+
 class Ui_GamerRoom(object):
     def setupUi(self, GamerRoom):
         GamerRoom.setObjectName("GamerRoom")
@@ -39,7 +40,6 @@ class Ui_GamerRoom(object):
     def retranslateUi(self, GamerRoom):
         _translate = QtCore.QCoreApplication.translate
         GamerRoom.setWindowTitle(_translate("GamerRoom", "MainWindow"))
-
 
 
 if __name__ == "__main__":
