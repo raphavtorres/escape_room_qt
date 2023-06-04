@@ -11,7 +11,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import files_rc
 
-
 class Ui_GamerRoom(object):
     def setupUi(self, GamerRoom):
         GamerRoom.setObjectName("GamerRoom")
@@ -32,6 +31,47 @@ class Ui_GamerRoom(object):
         self.open_pc_btn.setStyleSheet("background-color: rgba(0,0,0,0);")
         self.open_pc_btn.setText("")
         self.open_pc_btn.setObjectName("open_pc_btn")
+        self.robot_truck_frame = QtWidgets.QFrame(self.centralwidget)
+        self.robot_truck_frame.setGeometry(QtCore.QRect(0, 0, 601, 581))
+        self.robot_truck_frame.setStyleSheet("background-color: rgba(0,0,0,150);")
+        self.robot_truck_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.robot_truck_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.robot_truck_frame.setObjectName("robot_truck_frame")
+        self.robot_friend_lb = QtWidgets.QLabel(self.robot_truck_frame)
+        self.robot_friend_lb.setGeometry(QtCore.QRect(270, 100, 341, 361))
+        self.robot_friend_lb.setStyleSheet("background-color: none;")
+        self.robot_friend_lb.setText("")
+        self.robot_friend_lb.setPixmap(QtGui.QPixmap(":/background/images/robot_friend_removebg_img.png"))
+        self.robot_friend_lb.setScaledContents(True)
+        self.robot_friend_lb.setObjectName("robot_friend_lb")
+        self.blue_tracktor_lb = QtWidgets.QLabel(self.robot_truck_frame)
+        self.blue_tracktor_lb.setGeometry(QtCore.QRect(110, 260, 171, 151))
+        self.blue_tracktor_lb.setStyleSheet("background-color: none;")
+        self.blue_tracktor_lb.setText("")
+        self.blue_tracktor_lb.setPixmap(QtGui.QPixmap(":/background/images/tractors/blue_tracktor_img.png"))
+        self.blue_tracktor_lb.setScaledContents(True)
+        self.blue_tracktor_lb.setObjectName("blue_tracktor_lb")
+        self.label = QtWidgets.QLabel(self.robot_truck_frame)
+        self.label.setGeometry(QtCore.QRect(140, 420, 381, 41))
+        self.label.setStyleSheet("background-color: white;\n"
+"padding: 10px;\n"
+"border-radius: 10px;")
+        self.label.setObjectName("label")
+        self.finish_level_btn = QtWidgets.QPushButton(self.robot_truck_frame)
+        self.finish_level_btn.setGeometry(QtCore.QRect(84, 242, 231, 161))
+        self.finish_level_btn.setStyleSheet("background-color: rgba(0,0,0,0);")
+        self.finish_level_btn.setText("")
+        self.finish_level_btn.setObjectName("finish_level_btn")
+        self.open_portal_frame = QtWidgets.QFrame(self.centralwidget)
+        self.open_portal_frame.setGeometry(QtCore.QRect(389, 90, 171, 421))
+        self.open_portal_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.open_portal_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.open_portal_frame.setObjectName("open_portal_frame")
+        self.open_portal_btn = QtWidgets.QPushButton(self.open_portal_frame)
+        self.open_portal_btn.setGeometry(QtCore.QRect(0, 0, 171, 421))
+        self.open_portal_btn.setStyleSheet("background-color: rgba(0,0,0,0);")
+        self.open_portal_btn.setText("")
+        self.open_portal_btn.setObjectName("open_portal_btn")
         GamerRoom.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(GamerRoom)
@@ -40,6 +80,8 @@ class Ui_GamerRoom(object):
     def retranslateUi(self, GamerRoom):
         _translate = QtCore.QCoreApplication.translate
         GamerRoom.setWindowTitle(_translate("GamerRoom", "MainWindow"))
+        self.label.setText(_translate("GamerRoom", "You did it! Congrats! Now click on the tracktor and let\'s find the other two."))
+
 
 
 if __name__ == "__main__":

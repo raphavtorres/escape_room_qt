@@ -139,7 +139,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="files_rc.qrc">:/background/images/gamer_room_fase/password_img.png</pixmap>
+      <pixmap resource="files_rc.qrc">:/background/images/gamer_room_fase/password.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -180,6 +180,57 @@ background-color: #533DF0;
      </property>
      <property name="text">
       <string>ENTER</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="file_opened_frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>561</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="file_opened_lb">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>0</y>
+       <width>411</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="files_rc.qrc">:/background/images/gamer_room_fase/file_opened.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="get_truck_btn">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>90</y>
+       <width>161</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(0,0,0,0);</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>

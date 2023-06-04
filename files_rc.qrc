@@ -1,8 +1,12 @@
 <RCC>
   <qresource prefix="background">
-    <file>images/gamer_room_fase/mgph.png</file>
-    <file>images/gamer_room_fase/password_img.png</file>
+    <file>images/robot_friend_removebg_img.png</file>
+    <file>images/tractors/blue_tracktor_img.png</file>
+    <file>images/tractors/red_tractor_img.png</file>
+    <file>images/tractors/yellowpurple_tractor_img.png</file>
     <file>images/gamer_room_fase/gamer_room_img_nobg.png</file>
+    <file>images/gamer_room_fase/password.png</file>
+    <file>images/gamer_room_fase/file_opened.png</file>
     <file>images/futuristic_plants_room_img.webp</file>
     <file>images/gamer_room_img.png</file>
     <file>images/gamer_room_fase/computer_screen.png</file>
