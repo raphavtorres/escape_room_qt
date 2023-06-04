@@ -11,7 +11,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import files_rc
 
-
 class Ui_ComputerScreen(object):
     def setupUi(self, ComputerScreen):
         ComputerScreen.setObjectName("ComputerScreen")
@@ -28,11 +27,11 @@ class Ui_ComputerScreen(object):
         self.background_img.setPixmap(QtGui.QPixmap(":/background/images/gamer_room_fase/computer_screen.png"))
         self.background_img.setScaledContents(True)
         self.background_img.setObjectName("background_img")
-        self.open_file = QtWidgets.QPushButton(self.centralwidget)
-        self.open_file.setGeometry(QtCore.QRect(454, 162, 51, 51))
-        self.open_file.setStyleSheet("background-color: rgba(0,0,0,0);")
-        self.open_file.setText("")
-        self.open_file.setObjectName("open_file")
+        self.open_file_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.open_file_btn.setGeometry(QtCore.QRect(454, 162, 51, 51))
+        self.open_file_btn.setStyleSheet("background-color: rgba(0,0,0,0);")
+        self.open_file_btn.setText("")
+        self.open_file_btn.setObjectName("open_file_btn")
         self.back_to_room_lb = QtWidgets.QLabel(self.centralwidget)
         self.back_to_room_lb.setGeometry(QtCore.QRect(10, 0, 91, 101))
         self.back_to_room_lb.setText("")
@@ -40,13 +39,36 @@ class Ui_ComputerScreen(object):
         self.back_to_room_lb.setScaledContents(True)
         self.back_to_room_lb.setObjectName("back_to_room_lb")
         self.back_to_room_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.back_to_room_btn.setGeometry(QtCore.QRect(10, 0, 101, 101))
-        self.back_to_room_btn.setStyleSheet("background-color: rgba(0,0,0,0);")
+        self.back_to_room_btn.setGeometry(QtCore.QRect(0, 0, 101, 101))
+        self.back_to_room_btn.setStyleSheet("background-color: rgba(0,0,0,0)")
         self.back_to_room_btn.setText("")
         self.back_to_room_btn.setObjectName("back_to_room_btn")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(260, 50, 47, 13))
-        self.label.setObjectName("label")
+        self.password_frame = QtWidgets.QFrame(self.centralwidget)
+        self.password_frame.setEnabled(True)
+        self.password_frame.setGeometry(QtCore.QRect(10, 90, 581, 501))
+        self.password_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.password_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.password_frame.setObjectName("password_frame")
+        self.passwordbox_lb = QtWidgets.QLabel(self.password_frame)
+        self.passwordbox_lb.setGeometry(QtCore.QRect(60, 20, 451, 301))
+        self.passwordbox_lb.setText("")
+        self.passwordbox_lb.setPixmap(QtGui.QPixmap(":/background/images/gamer_room_fase/password_img.png"))
+        self.passwordbox_lb.setScaledContents(True)
+        self.passwordbox_lb.setObjectName("passwordbox_lb")
+        self.pass_input = QtWidgets.QLineEdit(self.password_frame)
+        self.pass_input.setGeometry(QtCore.QRect(220, 170, 131, 31))
+        self.pass_input.setStyleSheet("border-radius: 10px;\n"
+"color: white;\n"
+"background-color: #2B2764;")
+        self.pass_input.setFrame(True)
+        self.pass_input.setObjectName("pass_input")
+        self.enter_pass_btn = QtWidgets.QPushButton(self.password_frame)
+        self.enter_pass_btn.setGeometry(QtCore.QRect(230, 200, 111, 31))
+        self.enter_pass_btn.setStyleSheet("border-radius: 10px;\n"
+"color: white;\n"
+"background-color: #533DF0;\n"
+"")
+        self.enter_pass_btn.setObjectName("enter_pass_btn")
         ComputerScreen.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(ComputerScreen)
@@ -55,7 +77,8 @@ class Ui_ComputerScreen(object):
     def retranslateUi(self, ComputerScreen):
         _translate = QtCore.QCoreApplication.translate
         ComputerScreen.setWindowTitle(_translate("ComputerScreen", "MainWindow"))
-        self.label.setText(_translate("ComputerScreen", "TextLabel"))
+        self.enter_pass_btn.setText(_translate("ComputerScreen", "ENTER"))
+
 
 
 if __name__ == "__main__":
