@@ -1,28 +1,21 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
-from gamer_room_window import Ui_MainWindow
+import os, sys
 
-class MyWindow(Ui_MainWindow):
-    def __init__(self, MainWindow):
-        self.setupUi(MainWindow)
+from PyQt5 import uic
+from PyQt5 import QtWidgets
+
+from gamer_room_level_test import GamerRoom
 
 
-stylesheet = """
-    MainWindow {
-        background-image: url("C:\\Users\\ct67ca\\Desktop\\escape_room_qt\\teste.jpg");
-        background-repeat: no-repeat; 
-        background-position: center;
-    }
-"""
+class PortalGUI():
+    def __init__(self):
+        # WINDOWS
+        self.gamer_room_window = uic.loadUi("windows_ui\\gamer_room_window.ui")
+        
+
+        GamerRoom(self.gamer_room_window)  # Starting program
 
 
 if __name__ == "__main__":
-    import sys
     app = QtWidgets.QApplication(sys.argv)
-    app.setStyleSheet(stylesheet)
-    MainWindow = QtWidgets.QMainWindow()
-    # ui = Ui_MainWindow()
-    # ui.setupUi(MainWindow)
-    window = MyWindow(MainWindow)
-
-    MainWindow.show()
+    window = PortalGUI()
     sys.exit(app.exec_())

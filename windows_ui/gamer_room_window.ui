@@ -45,7 +45,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="files_rc.qrc">:/background/images/gamer_room_img.png</pixmap>
+     <pixmap>../images/gamer_room_img.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -101,7 +101,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="files_rc.qrc">:/background/images/robot_friend_removebg_img.png</pixmap>
+      <pixmap resource="../files_rc.qrc">:/background/images/robot_friend_removebg_img.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -123,7 +123,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="files_rc.qrc">:/background/images/tractors/blue_tracktor_img.png</pixmap>
+      <pixmap resource="../files_rc.qrc">:/background/images/tractors/blue_tracktor_img.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -228,7 +228,7 @@ border-radius: 10px;</string>
   </widget>
  </widget>
  <resources>
-  <include location="files_rc.qrc"/>
+  <include location="../files_rc.qrc"/>
  </resources>
  <connections/>
 </ui>

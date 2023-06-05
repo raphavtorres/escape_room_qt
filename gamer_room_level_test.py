@@ -1,20 +1,21 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import uic
+from PyQt5 import QtWidgets
 from PyQt5.QtGui import QMovie
+
 from time import sleep
 
+# from two_story_house_level import TwoStoryHouse
 
-from two_story_house_level import TwoStoryHouse
 
+class GamerRoom():
+    def __init__(self, ui, won=False):
+        self.ui = ui
+        self.ui.show()  # Starting program
 
-class GamerRoom(QtWidgets.QMainWindow):
-    def __init__(self, won=False):
-        super().__init__()
-
-        self.ui = Ui_GamerRoom()
-        self.ui.setupUi(self)
         self.ui.robot_truck_frame.close()
         self.ui.open_portal_frame.close()
         self.ui.glitch_frame.close()
+
         self.won = won
         self.test_if_won()
         self.Ui_Elements()
@@ -26,9 +27,10 @@ class GamerRoom(QtWidgets.QMainWindow):
         self.ui.open_portal_btn.clicked.connect(self.open_portal)
 
     def open_window(self):
-        self.computer_screen = ComputerScreen()
-        self.close()
-        self.computer_screen.show()
+        gr_ui = self.ui
+        ui = self.computer_screen = uic.loadUi("windows_ui\\computer_screen_window.ui")
+        self.computer_screen = ComputerScreen(gr_ui, ui)
+        self.ui.close()
 
     def test_if_won(self):
         if self.won:
@@ -49,9 +51,10 @@ class GamerRoom(QtWidgets.QMainWindow):
         self.movie.start()
 
     def open_two_story_house(self):
-        self.next_level = TwoStoryHouse()
-        self.close()
-        self.next_level.show()
+        ...
+        # self.next_level = TwoStoryHouse()
+        # self.close()
+        # self.next_level.show()
 
     def open_portal(self):
         self.show_glitch()
@@ -61,16 +64,18 @@ class GamerRoom(QtWidgets.QMainWindow):
         print("OPENING NEW WINDOW")
 
 
-class ComputerScreen(QtWidgets.QMainWindow):
-    def __init__(self):
-        super().__init__()
+class ComputerScreen():
+    def __init__(self, gr_ui, ui):
+        self.ui = ui
+        self.gr_ui = gr_ui
+        self.ui.show()
 
-        self.ui = Ui_ComputerScreen()
-        self.ui.setupUi(self)
         self.ui.password_frame.close()
         self.ui.file_opened_frame.close()
+
         self.Ui_Elements()
         self.gamer_room = None
+        
 
     def Ui_Elements(self):
         self.ui.back_to_room_btn.clicked.connect(self.back_to_room)
@@ -79,9 +84,8 @@ class ComputerScreen(QtWidgets.QMainWindow):
         self.ui.get_truck_btn.clicked.connect(self.finish_level)
 
     def back_to_room(self, won=False):
-        self.gamer_room = GamerRoom(won)
-        self.close()
-        self.gamer_room.show()
+        GamerRoom(self.gr_ui, won)
+        self.ui.close()
 
     def open_file_click(self):
         self.ui.password_frame.show()
@@ -95,11 +99,3 @@ class ComputerScreen(QtWidgets.QMainWindow):
 
     def finish_level(self):
         self.back_to_room(won=True)
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    gamer_room = GamerRoom()
-    gamer_room.show()
-    sys.exit(app.exec_())
