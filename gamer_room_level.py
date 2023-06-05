@@ -1,8 +1,10 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QMovie
+from time import sleep
 
 from gamer_room_window import Ui_GamerRoom
 from computer_screen_window import Ui_ComputerScreen
+from two_story_house_level import TwoStoryHouse
 
 
 class GamerRoom(QtWidgets.QMainWindow):
@@ -13,6 +15,7 @@ class GamerRoom(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.ui.robot_truck_frame.close()
         self.ui.open_portal_frame.close()
+        self.ui.glitch_frame.close()
         self.won = won
         self.test_if_won()
         self.Ui_Elements()
@@ -38,9 +41,23 @@ class GamerRoom(QtWidgets.QMainWindow):
         self.movie = QMovie("images/gifs/gamer_room_portal_gif.gif")
         self.ui.bg_img_lb.setMovie(self.movie)
         self.movie.start()
-        # self.bg_img_lb.setPixmap(QtGui.QPixmap(":/background/images/gifs/gamer_room_portal_gif.gif"))
+
+    def show_glitch(self):
+        self.ui.open_portal_frame.close()
+        self.ui.glitch_frame.show()
+        self.movie = QMovie("images/gifs/glitch_gif.gif")
+        self.ui.bg_img_lb.setMovie(self.movie)
+        self.movie.start()
+
+    def open_two_story_house(self):
+        self.next_level = TwoStoryHouse()
+        self.close()
+        self.next_level.show()
 
     def open_portal(self):
+        self.show_glitch()
+        sleep(5)
+        self.open_two_story_house()
         print("GLITCH SCREEN")
         print("OPENING NEW WINDOW")
 

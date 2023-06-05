@@ -163,6 +163,35 @@ border-radius: 10px;</string>
       <string/>
      </property>
     </widget>
+    <widget class="QFrame" name="glitch_frame">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>601</width>
+       <height>601</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="glitch_lb">
+      <property name="geometry">
+       <rect>
+        <x>6</x>
+        <y>-8</y>
+        <width>591</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QFrame" name="open_portal_frame">
     <property name="geometry">

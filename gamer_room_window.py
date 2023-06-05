@@ -62,6 +62,14 @@ class Ui_GamerRoom(object):
         self.finish_level_btn.setStyleSheet("background-color: rgba(0,0,0,0);")
         self.finish_level_btn.setText("")
         self.finish_level_btn.setObjectName("finish_level_btn")
+        self.glitch_frame = QtWidgets.QFrame(self.robot_truck_frame)
+        self.glitch_frame.setGeometry(QtCore.QRect(0, 0, 601, 601))
+        self.glitch_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.glitch_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.glitch_frame.setObjectName("glitch_frame")
+        self.glitch_lb = QtWidgets.QLabel(self.glitch_frame)
+        self.glitch_lb.setGeometry(QtCore.QRect(6, -8, 591, 611))
+        self.glitch_lb.setObjectName("glitch_lb")
         self.open_portal_frame = QtWidgets.QFrame(self.centralwidget)
         self.open_portal_frame.setGeometry(QtCore.QRect(389, 90, 171, 421))
         self.open_portal_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -81,6 +89,7 @@ class Ui_GamerRoom(object):
         _translate = QtCore.QCoreApplication.translate
         GamerRoom.setWindowTitle(_translate("GamerRoom", "MainWindow"))
         self.label.setText(_translate("GamerRoom", "You did it! Congrats! Now click on the tracktor and let\'s find the other two."))
+        self.glitch_lb.setText(_translate("GamerRoom", "TextLabel"))
 
 
 

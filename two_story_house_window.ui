@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>TwoStoryHouse</class>
+ <widget class="QMainWindow" name="TwoStoryHouse">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -51,7 +51,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="../images/imgsbck.qrc">:/background/futuristic_plants_room_img.webp</pixmap>
+     <pixmap resource="files_rc.qrc">:/background/images/futuristic_plants_room_img.webp</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -60,7 +60,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../images/imgsbck.qrc"/>
+  <include location="files_rc.qrc"/>
  </resources>
  <connections/>
 </ui>

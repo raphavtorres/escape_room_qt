@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="background">
+    <file>images/glitch_gif.gif</file>
     <file>images/robot_friend_removebg_img.png</file>
     <file>images/tractors/blue_tracktor_img.png</file>
     <file>images/tractors/red_tractor_img.png</file>
