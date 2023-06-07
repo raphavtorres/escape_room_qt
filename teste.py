@@ -3,6 +3,7 @@ from PyQt5.QtGui import QPixmap, QDrag
 from PyQt5.QtCore import QMimeData, Qt
 import sys
 
+
 class MainWidget(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
@@ -13,7 +14,6 @@ class MainWidget(QtWidgets.QWidget):
         self.button = DragDropWidget("DRAG DROP", self)
         self.button.resize(200, 60)
 
-    # overriding?
     def dragEnterEvent(self, event):
         event.accept()
 

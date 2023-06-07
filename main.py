@@ -3,6 +3,9 @@ from PyQt5 import QtWidgets
 
 
 from gamer_room_functions import open_computer, open_street_window, back_to_room, open_file_click, check_input, finish_level, show_clock, close_paper_clock,get_paper, glitch_screen
+
+from teste import MainWidget
+
 import files_rc
 
 
@@ -15,7 +18,13 @@ class PortalGUI():
         self.gamer_room_window.clock_lb.close()
         self.gamer_room_window.close_paper_clock_btn.close()
         self.gamer_room_window.opened_paper_lb.close()
+        self.main_widget()
         app.exec()
+
+    def main_widget(self):
+        self.widget = MainWidget()
+        self.widget.resize(600, 600)
+        self.widget.setWindowTitle("TESTE WIDGET")
 
     def windows(self):
         self.gamer_room_window = uic.loadUi("windows_ui\\gamer_room_window.ui")

@@ -56,8 +56,8 @@ def finish_level(window):
 
 def enter_portal(window):
     window.gamer_room_portal.close()
-    window.two_story_house_window.show()
-
+    # window.two_story_house_window.show()
+    window.widget.show()
 
 def glitch_screen(window):
     window.movie = QMovie("images/gifs/glitch_gif.gif")
