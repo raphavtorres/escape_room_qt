@@ -1,5 +1,10 @@
 <RCC>
   <qresource prefix="background">
+    <file>images/gamer_room_fase/old_paper_img.png</file>
+    <file>images/gamer_room_fase/tree_img.png</file>
+    <file>images/gamer_room_fase/old_paper_img.png</file>
+    <file>images/gamer_room_fase/clock_img.png</file>
+    <file>images/gamer_room_fase/street_gmroom_img.png</file>
     <file>images/robot_friend_removebg_img.png</file>
     <file>images/tractors/blue_tracktor_img.png</file>
     <file>images/tractors/red_tractor_img.png</file>

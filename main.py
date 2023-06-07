@@ -1,7 +1,8 @@
 from PyQt5 import uic
 from PyQt5 import QtWidgets
 
-from gamer_room_level_test import gamer_room, open_window
+from gamer_room_level_test import open_computer, open_street_window, back_to_room, open_file_click, check_input, finish_level, show_clock, close_paper_clock,get_paper
+import files_rc
 
 
 class PortalGUI():
@@ -10,20 +11,32 @@ class PortalGUI():
         self.windows()
         self.ui_elements()
         self.gamer_room_window.show()
+        self.gamer_room_window.clock_lb.close()
+        self.gamer_room_window.close_paper_clock_btn.close()
+        self.gamer_room_window.opened_paper_lb.close()
         app.exec()
 
     def windows(self):
         self.gamer_room_window = uic.loadUi("windows_ui\\gamer_room_window.ui")
         self.computer_screen = uic.loadUi("windows_ui\\computer_screen_window.ui")
+        self.street_window = uic.loadUi("windows_ui\\street_window.ui")
 
     def ui_elements(self):
         # gamer room
-        self.gamer_room_window.open_pc_btn.clicked.connect(self.open_window)
+        self.gamer_room_window.open_pc_btn.clicked.connect(lambda: open_computer(self))
+        self.gamer_room_window.street_window_btn.clicked.connect(lambda: open_street_window(self))
+        self.gamer_room_window.clock_btn.clicked.connect(lambda: show_clock(self))
+        self.gamer_room_window.clock_btn.clicked.connect(lambda: show_clock(self))
+        self.gamer_room_window.close_paper_clock_btn.clicked.connect(lambda: close_paper_clock(self))
+        self.gamer_room_window.get_paper_btn.clicked.connect(lambda: get_paper(self))
+        
         # computer screen
-        self.computer_screen.back_to_room_btn.clicked.connect(self.back_to_room)
-        self.computer_screen.open_file_btn.clicked.connect(self.open_file_click)
-        self.computer_screen.enter_pass_btn.clicked.connect(self.check_input)
-        self.computer_screen.get_truck_btn.clicked.connect(self.finish_level)
+        self.computer_screen.back_to_room_btn.clicked.connect(lambda: back_to_room(self))
+        self.computer_screen.open_file_btn.clicked.connect(lambda: open_file_click(self))
+        self.computer_screen.enter_pass_btn.clicked.connect(lambda: check_input(self))
+        self.computer_screen.get_truck_btn.clicked.connect(lambda: finish_level(self))
+        # street window
+        self.street_window.back_to_room_btn.clicked.connect(lambda: back_to_room(self))
 
     def open_window(self):
         self.gamer_room_window.close()
@@ -31,25 +44,9 @@ class PortalGUI():
         self.computer_screen.show()
         self.computer_screen.password_frame.close()
         self.computer_screen.file_opened_frame.close()
-
-    # Computer screen FUNCTIONS
-    def back_to_room(self, won=False):
-        self.computer_screen.close()
-        self.gamer_room_window.show()
+    
         
-    def open_file_click(self):
-        self.computer_screen.password_frame.show()
-
-    def check_input(self):
-        if self.computer_screen.pass_input.text() == "pass":
-            self.computer_screen.file_opened_frame.show()
-        else:
-            print("WRONG PASS")
-        self.computer_screen.password_frame.close()
-
-    def finish_level(self):
-        self.back_to_room(won=True)
 
 if __name__ == "__main__":
-    window = PortalGUI()
+    portal_gui = PortalGUI()
     
