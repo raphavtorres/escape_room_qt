@@ -4,7 +4,7 @@ from PyQt5 import QtWidgets
 
 from gamer_room_functions import open_computer, open_street_window, back_to_room, open_file_click, check_input, finish_level, show_clock, close_paper_clock,get_paper, glitch_screen
 
-from teste import MainWidget
+from windows_ui.drag_drop_window import MainWidget
 
 import files_rc
 
@@ -58,10 +58,7 @@ class PortalGUI():
         self.computer_screen.show()
         self.computer_screen.password_frame.close()
         self.computer_screen.file_opened_frame.close()
-        
 
-    
-        
 
 if __name__ == "__main__":
     portal_gui = PortalGUI()
