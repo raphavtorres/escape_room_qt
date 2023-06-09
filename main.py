@@ -4,7 +4,6 @@ from PyQt5 import QtWidgets
 
 from gamer_room_functions import open_computer, open_street_window, back_to_room, open_file_click, check_input, finish_level, show_clock, close_paper_clock,get_paper, glitch_screen
 
-from windows_ui.drag_drop_window import MainWidget
 
 import files_rc
 
@@ -14,17 +13,15 @@ class PortalGUI():
         app = QtWidgets.QApplication([])
         self.windows()
         self.ui_elements()
+        self.start_game()
+        app.exec()
+
+    def start_game(self):
         self.gamer_room_window.show()
         self.gamer_room_window.clock_lb.close()
         self.gamer_room_window.close_paper_clock_btn.close()
         self.gamer_room_window.opened_paper_lb.close()
-        self.main_widget()
-        app.exec()
 
-    def main_widget(self):
-        self.widget = MainWidget()
-        self.widget.resize(600, 600)
-        self.widget.setWindowTitle("TESTE WIDGET")
 
     def windows(self):
         self.gamer_room_window = uic.loadUi("windows_ui\\gamer_room_window.ui")
@@ -52,12 +49,6 @@ class PortalGUI():
         #gamer room portal
         self.gamer_room_portal.open_next_btn.clicked.connect(lambda: glitch_screen(self))
 
-    def open_window(self):
-        self.gamer_room_window.close()
-
-        self.computer_screen.show()
-        self.computer_screen.password_frame.close()
-        self.computer_screen.file_opened_frame.close()
 
 
 if __name__ == "__main__":
