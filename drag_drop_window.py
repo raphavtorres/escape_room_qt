@@ -44,6 +44,7 @@ class ShelfWindow(QtWidgets.QMainWindow, QtWidgets.QWidget):
         pos = event.pos()
         # print(event.source().objectName())
         print(pos)
+
         if event.source().objectName() == "green_book_lb":
             self.green_book_lb.move(pos)
         elif event.source().objectName() == "red_book_lb":
@@ -52,9 +53,29 @@ class ShelfWindow(QtWidgets.QMainWindow, QtWidgets.QWidget):
             self.blue_book_lb.move(pos)
 
         # TEST POSITIONS
+        self.test_positions()
 
         event.setDropAction(Qt.MoveAction)
         event.accept()
+
+    def test_positions(self):
+        # Getting positions
+        b_x_pos = self.blue_book_lb.x()
+        b_y_pos = self.blue_book_lb.y()
+
+        r_x_pos = self.red_book_lb.x()
+        r_y_pos = self.red_book_lb.y()
+
+        g_x_pos = self.green_book_lb.x()
+        g_y_pos = self.green_book_lb.y()
+
+        # Testing
+        if (130 < b_y_pos < 220) and (130 < r_y_pos < 220) and (130 < g_y_pos < 220):
+            # R G B
+            if (r_x_pos < g_x_pos) and (r_x_pos < b_x_pos):
+                if (g_x_pos < b_x_pos):
+                    print("ok")
+
 
 
 class DragDropWidget(QtWidgets.QLabel):
@@ -62,7 +83,6 @@ class DragDropWidget(QtWidgets.QLabel):
         super().__init__(*args, **kwargs)
 
     def mouseMoveEvent(self, event):
-        print(event)
         mime_data = QMimeData()  # holding the instance of the exact location of btn
         drag = QDrag(self)
         drag.setMimeData(mime_data)
