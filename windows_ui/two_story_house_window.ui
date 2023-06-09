@@ -229,6 +229,22 @@
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="close_paper_btn">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>601</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>background_lb</zorder>
    <zorder>shelf_btn</zorder>
    <zorder>demon_lb</zorder>
@@ -239,6 +255,7 @@
    <zorder>key_btn</zorder>
    <zorder>cabinet_btn</zorder>
    <zorder>paper_frame</zorder>
+   <zorder>close_paper_btn</zorder>
   </widget>
  </widget>
  <resources>

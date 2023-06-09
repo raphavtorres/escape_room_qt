@@ -57,70 +57,13 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="blue_book_lb">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>180</y>
-      <width>51</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="../files_rc.qrc">:/background/images/two_story_house_fase/blue_book.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="red_book_lb">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>170</y>
-      <width>51</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="../files_rc.qrc">:/background/images/two_story_house_fase/red__book.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="green_book_lb">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>180</y>
-      <width>51</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="../files_rc.qrc">:/background/images/two_story_house_fase/green_book.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QPushButton" name="back_room_btn">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>75</width>
-      <height>81</height>
+      <x>0</x>
+      <y>0</y>
+      <width>101</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -130,6 +73,28 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="back_room_lb">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>101</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../files_rc.qrc">:/background/images/two_story_house_fase/two_story_house_img_nobg.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>bg_img_label</zorder>
+   <zorder>back_room_lb</zorder>
+   <zorder>back_room_btn</zorder>
   </widget>
  </widget>
  <resources>

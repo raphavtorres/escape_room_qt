@@ -1,5 +1,3 @@
-from PyQt5 import uic
-from PyQt5 import QtWidgets
 from PyQt5.QtGui import QMovie
 from PyQt5.QtCore import QTimer
 
@@ -56,8 +54,14 @@ def finish_level(window):
 
 def enter_portal(window):
     window.gamer_room_portal.close()
-    # window.two_story_house_window.show()
-    window.widget.show()
+    window.two_story_house_window.show()
+
+    window.two_story_house_window.demon_lb.close()
+    window.two_story_house_window.demon_btn.close()
+    window.two_story_house_window.key_lb.close()
+    window.two_story_house_window.key_btn.close()
+    window.two_story_house_window.paper_frame.close()
+
 
 def glitch_screen(window):
     window.movie = QMovie("images/gifs/glitch_gif.gif")

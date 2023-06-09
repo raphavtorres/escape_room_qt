@@ -1,12 +1,13 @@
 <RCC>
   <qresource prefix="background">
+    <file>images/two_story_house_fase/two_story_house_img_nobg.png</file>
     <file>images/two_story_house_fase/key.png</file>
     <file>images/gifs/death_wolf.gif</file>
     <file>images/two_story_house_fase/msg_paper.png</file>
     <file>images/two_story_house_fase/blue_book.png</file>
     <file>images/two_story_house_fase/green_book.png</file>
-    <file>images/two_story_house_fase/red__book.png</file>
     <file>images/two_story_house_fase/Evil_Eyes-removebg-preview.png</file>
+    <file>images/two_story_house_fase/red_book.png</file>
     <file>images/two_story_house_fase/book_shelf.png</file>
     <file>images/gifs/gamer_room_portal_gif.gif</file>
     <file>images/gamer_room_fase/tree_img.png</file>
