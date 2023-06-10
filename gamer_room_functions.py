@@ -61,6 +61,8 @@ def enter_portal(window):
     window.two_story_house_window.key_lb.close()
     window.two_story_house_window.key_btn.close()
     window.two_story_house_window.paper_frame.close()
+    window.two_story_house_window.key_frame.close()
+
 
 
 def glitch_screen(window):

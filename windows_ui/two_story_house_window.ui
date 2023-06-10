@@ -245,6 +245,41 @@
      <string/>
     </property>
    </widget>
+   <widget class="QFrame" name="key_frame">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>200</y>
+      <width>271</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="big_key_lb">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>12</y>
+       <width>211</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../files_rc.qrc">:/background/images/two_story_house_fase/key.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
    <zorder>background_lb</zorder>
    <zorder>shelf_btn</zorder>
    <zorder>demon_lb</zorder>
@@ -255,6 +290,7 @@
    <zorder>key_btn</zorder>
    <zorder>cabinet_btn</zorder>
    <zorder>paper_frame</zorder>
+   <zorder>key_frame</zorder>
    <zorder>close_paper_btn</zorder>
   </widget>
  </widget>

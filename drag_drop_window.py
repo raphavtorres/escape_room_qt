@@ -7,10 +7,11 @@ from windows_ui.shelf_window import Ui_shelf_window
 import files_rc
 
 class ShelfWindow(QtWidgets.QMainWindow, QtWidgets.QWidget):
-    def __init__(self):
+    def __init__(self, two_story_house_window):
         super().__init__()
         self.ui = Ui_shelf_window()
         self.ui.setupUi(self)
+        self.two_story_house_window = two_story_house_window
         self.books_show()
 
     def books_show(self):
@@ -74,7 +75,10 @@ class ShelfWindow(QtWidgets.QMainWindow, QtWidgets.QWidget):
             # R G B
             if (r_x_pos < g_x_pos) and (r_x_pos < b_x_pos):
                 if (g_x_pos < b_x_pos):
-                    print("ok")
+                    self.close()
+                    self.two_story_house_window.key_lb.show()
+                    self.two_story_house_window.key_btn.show()
+                    self.two_story_house_window.show()
 
 
 

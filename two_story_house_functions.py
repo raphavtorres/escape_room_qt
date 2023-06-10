@@ -19,9 +19,10 @@ def get_two_story_paper(window):
     window.two_story_house_window.demon_lb.show()
 
 
-def close_two_story_paper(window):
+def close_paper_key_cabinet(window):
     window.two_story_house_window.paper_frame.close()
-    window.two_story_house_window.close_paper_btn.close()
+    window.two_story_house_window.key_frame.close()
+    window.two_story_house_window.close_paper_btn.close() 
 
 
 def death_window(window):
@@ -30,6 +31,12 @@ def death_window(window):
     window.death_window.bg_gif_lb.setMovie(window.movie)
     window.movie.start()
     window.death_window.show()
+
+
+def show_key(window):
+    window.two_story_house_window.key_frame.show()
+    window.two_story_house_window.close_paper_btn.show()
+
 
 
 def open_portal(window):
