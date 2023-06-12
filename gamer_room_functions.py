@@ -18,10 +18,15 @@ def get_paper(window):
     window.gamer_room_window.opened_paper_lb.show()
     window.gamer_room_window.close_paper_clock_btn.show()
 
+def get_coin(window):
+    window.gamer_room_window.big_coin_lb.show()
+    window.gamer_room_window.close_paper_clock_btn.show()
+
 
 def close_paper_clock(window):
     window.gamer_room_window.clock_lb.close()
     window.gamer_room_window.opened_paper_lb.close()
+    window.gamer_room_window.big_coin_lb.close()
     window.gamer_room_window.close_paper_clock_btn.close()
 
 
@@ -66,6 +71,7 @@ def enter_portal(window):
 
 
 def glitch_screen(window):
+    window.gamer_room_portal.bot_msg_lb.close()
     window.movie = QMovie("images/gifs/glitch_gif.gif")
     window.gamer_room_portal.bg_gif_lb.setMovie(window.movie)
     window.movie.start()

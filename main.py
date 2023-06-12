@@ -1,7 +1,7 @@
 from PyQt5 import uic
 from PyQt5 import QtWidgets
 
-from gamer_room_functions import open_computer, open_street_window, back_to_room, open_file_click, check_input, finish_level, show_clock, close_paper_clock,get_paper, glitch_screen
+from gamer_room_functions import open_computer, open_street_window, back_to_room, open_file_click, check_input, finish_level, show_clock, close_paper_clock,get_paper, glitch_screen, get_coin
 
 from two_story_house_functions import open_shelf, back_to_two_story_house, close_paper_key_cabinet, get_two_story_paper, death_window, show_key
 from drag_drop_window import ShelfWindow
@@ -25,6 +25,7 @@ class PortalGUI():
         self.gamer_room_window.clock_lb.close()
         self.gamer_room_window.close_paper_clock_btn.close()
         self.gamer_room_window.opened_paper_lb.close()
+        self.gamer_room_window.big_coin_lb.close()
 
 
     def windows(self):
@@ -46,6 +47,7 @@ class PortalGUI():
         self.gamer_room_window.clock_btn.clicked.connect(lambda: show_clock(self))
         self.gamer_room_window.close_paper_clock_btn.clicked.connect(lambda: close_paper_clock(self))
         self.gamer_room_window.get_paper_btn.clicked.connect(lambda: get_paper(self))
+        self.gamer_room_window.coin_btn.clicked.connect(lambda: get_coin(self))
         # computer screen
         self.computer_screen.back_to_room_btn.clicked.connect(lambda: back_to_room(self))
         self.computer_screen.open_file_btn.clicked.connect(lambda: open_file_click(self))

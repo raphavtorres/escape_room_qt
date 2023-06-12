@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="background">
+    <file>images/two_story_house_fase/cabinet.png</file>
+    <file>images/gamer_room_fase/caesar_coin.png</file>
     <file>images/two_story_house_fase/two_story_house_img_nobg.png</file>
     <file>images/two_story_house_fase/key.png</file>
     <file>images/gifs/death_wolf.gif</file>

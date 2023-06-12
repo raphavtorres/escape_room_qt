@@ -22,7 +22,9 @@ def get_two_story_paper(window):
 def close_paper_key_cabinet(window):
     window.two_story_house_window.paper_frame.close()
     window.two_story_house_window.key_frame.close()
-    window.two_story_house_window.close_paper_btn.close() 
+    window.two_story_house_window.close_paper_btn.close()
+    window.two_story_house_window.key_btn.close()
+    window.two_story_house_window.key_lb.close()
 
 
 def death_window(window):
