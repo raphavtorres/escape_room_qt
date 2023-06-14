@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="background">
+    <file>images/gifs/two_story_house_portal_gif.gif</file>
+    <file>images/two_story_house_fase/padlock.png</file>
     <file>images/two_story_house_fase/cabinet.png</file>
     <file>images/gamer_room_fase/caesar_coin.png</file>
     <file>images/two_story_house_fase/two_story_house_img_nobg.png</file>

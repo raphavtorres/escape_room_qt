@@ -3,7 +3,8 @@ from PyQt5 import QtWidgets
 
 from gamer_room_functions import open_computer, open_street_window, back_to_room, open_file_click, check_input, finish_level, show_clock, close_paper_clock,get_paper, glitch_screen, get_coin
 
-from two_story_house_functions import open_shelf, back_to_two_story_house, close_paper_key_cabinet, get_two_story_paper, death_window, show_key
+from two_story_house_functions import open_shelf, back_to_two_story_house, close_paper_key_cabinet, get_two_story_paper, death_window, show_key, open_cabinet, enter_portal
+
 from drag_drop_window import ShelfWindow
 
 import files_rc
@@ -27,7 +28,6 @@ class PortalGUI():
         self.gamer_room_window.opened_paper_lb.close()
         self.gamer_room_window.big_coin_lb.close()
 
-
     def windows(self):
         # gamer room
         self.gamer_room_window = uic.loadUi("windows_ui\\gamer_room_window.ui")
@@ -38,6 +38,7 @@ class PortalGUI():
         # two story house
         self.two_story_house_window = uic.loadUi("windows_ui\\two_story_house_window.ui")
         self.death_window = uic.loadUi("windows_ui\\death_window.ui")
+        self.two_story_house_portal = uic.loadUi("windows_ui\\two_story_house_portal.ui")
 
     def gamer_room_ui_elements(self):
         # gamer room
@@ -59,14 +60,18 @@ class PortalGUI():
         self.gamer_room_portal.open_next_btn.clicked.connect(lambda: glitch_screen(self))
 
     def two_story_house_ui_elements(self):
+        self.key_found = False
+        # buttons window
         self.two_story_house_window.get_paper_btn.clicked.connect(lambda: get_two_story_paper(self))
         self.two_story_house_window.close_paper_btn.clicked.connect(lambda: close_paper_key_cabinet(self))
         self.two_story_house_window.shelf_btn.clicked.connect(lambda: open_shelf(self, self.shelf_window))
         self.two_story_house_window.demon_btn.clicked.connect(lambda: death_window(self))
         self.two_story_house_window.key_btn.clicked.connect(lambda: show_key(self))
-
+        self.two_story_house_window.cabinet_btn.clicked.connect(lambda: open_cabinet(self))
         # shelf window
         self.shelf_window.ui.back_room_btn.clicked.connect(lambda: back_to_two_story_house(self, self.shelf_window))
+        # portal window
+        self.two_story_house_portal.enter_portal_btn.clicked.connect(lambda: enter_portal(self))
 
 
 if __name__ == "__main__":

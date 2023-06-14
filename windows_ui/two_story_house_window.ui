@@ -318,6 +318,60 @@ font-size: 16px;</string>
      </property>
     </widget>
    </widget>
+   <widget class="QFrame" name="padlock_frame">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>130</y>
+      <width>401</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="padlock_lb">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>30</y>
+       <width>181</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../files_rc.qrc">:/background/images/two_story_house_fase/padlock.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="padlok_msg_lb">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>270</y>
+       <width>291</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: white;
+padding: 20px;
+border-radius: 20px;
+font-size: 16px;</string>
+     </property>
+     <property name="text">
+      <string>The cabinet is locked, find the key</string>
+     </property>
+    </widget>
+   </widget>
    <zorder>background_lb</zorder>
    <zorder>shelf_btn</zorder>
    <zorder>demon_lb</zorder>
@@ -329,6 +383,7 @@ font-size: 16px;</string>
    <zorder>cabinet_btn</zorder>
    <zorder>paper_frame</zorder>
    <zorder>key_frame</zorder>
+   <zorder>padlock_frame</zorder>
    <zorder>close_paper_btn</zorder>
   </widget>
  </widget>

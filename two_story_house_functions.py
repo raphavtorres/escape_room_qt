@@ -23,8 +23,8 @@ def close_paper_key_cabinet(window):
     window.two_story_house_window.paper_frame.close()
     window.two_story_house_window.key_frame.close()
     window.two_story_house_window.close_paper_btn.close()
-    window.two_story_house_window.key_btn.close()
-    window.two_story_house_window.key_lb.close()
+    
+    window.two_story_house_window.padlock_frame.close()
 
 
 def death_window(window):
@@ -36,14 +36,27 @@ def death_window(window):
 
 
 def show_key(window):
+    window.key_found = True
+    window.two_story_house_window.key_btn.close()
+    window.two_story_house_window.key_lb.close()
     window.two_story_house_window.key_frame.show()
     window.two_story_house_window.close_paper_btn.show()
 
 
+def open_cabinet(window):
+    if window.key_found:
+        open_portal(window)
+    else:
+        window.two_story_house_window.padlock_frame.show()
+        window.two_story_house_window.close_paper_btn.show()
+
 
 def open_portal(window):
-    # window.gamer_room_portal.show()
-    # window.movie = QMovie("images/gifs/gamer_room_portal_gif.gif")
-    # window.gamer_room_portal.bg_gif_lb.setMovie(window.movie)
-    # window.movie.start()
-    ...
+    window.two_story_house_window.close()
+    window.two_story_house_portal.show()
+    window.movie = QMovie("images/gifs/two_story_house_portal_gif.gif")
+    window.two_story_house_portal.bg_gif_lb.setMovie(window.movie)
+    window.movie.start()
+
+def enter_portal(window):
+    print("GOING TO LAST LEVEL")
