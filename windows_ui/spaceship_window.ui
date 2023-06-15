@@ -133,9 +133,7 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-radius: 10px;
-background-color: grey;
-color: white;</string>
+      <string notr="true">border-radius: 10px;</string>
      </property>
     </widget>
     <widget class="QLabel" name="text_lb">
@@ -167,7 +165,7 @@ font-size: 16px;</string>
      <property name="styleSheet">
       <string notr="true">background-color: red;
 color: white;
-border-radius: 20px;</string>
+border-radius: 10px;</string>
      </property>
      <property name="text">
       <string>Enter</string>
@@ -225,12 +223,29 @@ border-radius: 20px;</string>
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="get_tractor_btn">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>320</y>
+      <width>141</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>bg_img_lb</zorder>
    <zorder>ship_error_btn</zorder>
    <zorder>open_math_btn</zorder>
    <zorder>math_frame</zorder>
    <zorder>close_btn</zorder>
    <zorder>main_screen_frame</zorder>
+   <zorder>get_tractor_btn</zorder>
   </widget>
  </widget>
  <resources>

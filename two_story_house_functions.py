@@ -65,6 +65,7 @@ def enter_portal(window):
     window.spaceship_window.math_frame.close()
     window.spaceship_window.main_screen_frame.close()
     window.spaceship_window.close_btn.close()
+    window.spaceship_window.get_tractor_btn.close()
 
 
 def glitch_screen_two_story_house(window):

@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="background">
+    <file>images/end_window.png</file>
     <file>images/spaceship_fase/math_screen.png</file>
     <file>images/spaceship_fase/main_screen_spaceship.png</file>
     <file>images/spaceship_closed.png</file>

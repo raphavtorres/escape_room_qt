@@ -5,7 +5,7 @@ from gamer_room_functions import open_computer, open_street_window, back_to_room
 
 from two_story_house_functions import open_shelf, back_to_two_story_house, close_paper_key_cabinet, get_two_story_paper, death_window, show_key, open_cabinet, glitch_screen_two_story_house
 
-from spaceship_functions import open_error_screen, open_math_screen, close_frames, read_user_input
+from spaceship_functions import open_error_screen, open_math_screen, close_frames, read_user_input, glitch_screen_spaceship
 
 from drag_drop_window import ShelfWindow
 
@@ -46,6 +46,9 @@ class PortalGUI():
         # spaceship
         self.spaceship_window = uic.loadUi("windows_ui\\spaceship_window.ui")
 
+        #end
+        self.end_window = uic.loadUi("windows_ui\\end_window.ui")
+
     def gamer_room_ui_elements(self):
         # gamer room
         self.gamer_room_window.open_pc_btn.clicked.connect(lambda: open_computer(self))
@@ -85,6 +88,8 @@ class PortalGUI():
         self.spaceship_window.open_math_btn.clicked.connect(lambda: open_math_screen(self))
         self.spaceship_window.close_btn.clicked.connect(lambda: close_frames(self))
         self.spaceship_window.enter_input_btn.clicked.connect(lambda: read_user_input(self))
+        self.spaceship_window.get_tractor_btn.clicked.connect(lambda: glitch_screen_spaceship(self))
+
 
 if __name__ == "__main__":
     portal_gui = PortalGUI()
