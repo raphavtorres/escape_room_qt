@@ -1,5 +1,18 @@
 <RCC>
   <qresource prefix="background">
+    <file>images/gifs/two_story_house_portal_gif.gif</file>
+    <file>images/two_story_house_fase/padlock.png</file>
+    <file>images/two_story_house_fase/cabinet.png</file>
+    <file>images/gamer_room_fase/caesar_coin.png</file>
+    <file>images/two_story_house_fase/two_story_house_img_nobg.png</file>
+    <file>images/two_story_house_fase/key.png</file>
+    <file>images/gifs/death_wolf.gif</file>
+    <file>images/two_story_house_fase/msg_paper.png</file>
+    <file>images/two_story_house_fase/blue_book.png</file>
+    <file>images/two_story_house_fase/green_book.png</file>
+    <file>images/two_story_house_fase/Evil_Eyes-removebg-preview.png</file>
+    <file>images/two_story_house_fase/red_book.png</file>
+    <file>images/two_story_house_fase/book_shelf.png</file>
     <file>images/gifs/gamer_room_portal_gif.gif</file>
     <file>images/gamer_room_fase/tree_img.png</file>
     <file>images/gamer_room_fase/old_paper_img.png</file>
@@ -12,8 +25,8 @@
     <file>images/gamer_room_fase/gamer_room_img_nobg.png</file>
     <file>images/gamer_room_fase/password.png</file>
     <file>images/gamer_room_fase/file_opened.png</file>
-    <file>images/futuristic_plants_room_img.webp</file>
     <file>images/gamer_room_img.png</file>
+    <file>images/two_story_house.png</file>
     <file>images/gamer_room_fase/computer_screen.png</file>
     <file>images/plant_room_img.png</file>
   </qresource>

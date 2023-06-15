@@ -73,6 +73,26 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="bot_msg_lb">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>480</y>
+      <width>381</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white;
+padding: 20px;
+font-size: 14px;
+border-radius: 20px;
+</string>
+    </property>
+    <property name="text">
+     <string>You dit it! Click on the portal to go to the next room...</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>
