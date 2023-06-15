@@ -3,7 +3,9 @@ from PyQt5 import QtWidgets
 
 from gamer_room_functions import open_computer, open_street_window, back_to_room, open_file_click, check_input, finish_level, show_clock, close_paper_clock,get_paper, glitch_screen, get_coin
 
-from two_story_house_functions import open_shelf, back_to_two_story_house, close_paper_key_cabinet, get_two_story_paper, death_window, show_key, open_cabinet, enter_portal
+from two_story_house_functions import open_shelf, back_to_two_story_house, close_paper_key_cabinet, get_two_story_paper, death_window, show_key, open_cabinet, glitch_screen_two_story_house
+
+from spaceship_functions import open_error_screen, open_math_screen, close_frames, read_user_input
 
 from drag_drop_window import ShelfWindow
 
@@ -17,6 +19,7 @@ class PortalGUI():
         self.shelf_window = ShelfWindow(self.two_story_house_window)
         self.gamer_room_ui_elements()
         self.two_story_house_ui_elements()
+        self.spaceship_ui_elements()
 
         self.start_game()
         app.exec()
@@ -39,6 +42,9 @@ class PortalGUI():
         self.two_story_house_window = uic.loadUi("windows_ui\\two_story_house_window.ui")
         self.death_window = uic.loadUi("windows_ui\\death_window.ui")
         self.two_story_house_portal = uic.loadUi("windows_ui\\two_story_house_portal.ui")
+
+        # spaceship
+        self.spaceship_window = uic.loadUi("windows_ui\\spaceship_window.ui")
 
     def gamer_room_ui_elements(self):
         # gamer room
@@ -71,8 +77,14 @@ class PortalGUI():
         # shelf window
         self.shelf_window.ui.back_room_btn.clicked.connect(lambda: back_to_two_story_house(self, self.shelf_window))
         # portal window
-        self.two_story_house_portal.enter_portal_btn.clicked.connect(lambda: enter_portal(self))
+        self.two_story_house_portal.enter_portal_btn.clicked.connect(lambda: glitch_screen_two_story_house(self))
 
+    def spaceship_ui_elements(self):
+        # buttons window
+        self.spaceship_window.ship_error_btn.clicked.connect(lambda: open_error_screen(self))
+        self.spaceship_window.open_math_btn.clicked.connect(lambda: open_math_screen(self))
+        self.spaceship_window.close_btn.clicked.connect(lambda: close_frames(self))
+        self.spaceship_window.enter_input_btn.clicked.connect(lambda: read_user_input(self))
 
 if __name__ == "__main__":
     portal_gui = PortalGUI()

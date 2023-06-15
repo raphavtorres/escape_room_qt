@@ -44,7 +44,6 @@ class ShelfWindow(QtWidgets.QMainWindow, QtWidgets.QWidget):
     def dropEvent(self, event):
         pos = event.pos()
         # print(event.source().objectName())
-        print(pos)
 
         if event.source().objectName() == "green_book_lb":
             self.green_book_lb.move(pos)

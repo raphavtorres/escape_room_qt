@@ -1,5 +1,9 @@
 <RCC>
   <qresource prefix="background">
+    <file>images/spaceship_fase/math_screen.png</file>
+    <file>images/spaceship_fase/main_screen_spaceship.png</file>
+    <file>images/spaceship_closed.png</file>
+    <file>images/spaceship_opened.png</file>
     <file>images/gifs/two_story_house_portal_gif.gif</file>
     <file>images/two_story_house_fase/padlock.png</file>
     <file>images/two_story_house_fase/cabinet.png</file>
@@ -28,6 +32,5 @@
     <file>images/gamer_room_img.png</file>
     <file>images/two_story_house.png</file>
     <file>images/gamer_room_fase/computer_screen.png</file>
-    <file>images/plant_room_img.png</file>
   </qresource>
 </RCC>

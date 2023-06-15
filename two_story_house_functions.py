@@ -58,5 +58,20 @@ def open_portal(window):
     window.two_story_house_portal.bg_gif_lb.setMovie(window.movie)
     window.movie.start()
 
+
 def enter_portal(window):
-    print("GOING TO LAST LEVEL")
+    window.two_story_house_portal.close()
+    window.spaceship_window.show()
+    window.spaceship_window.math_frame.close()
+    window.spaceship_window.main_screen_frame.close()
+    window.spaceship_window.close_btn.close()
+
+
+def glitch_screen_two_story_house(window):
+    window.two_story_house_portal.tractor_lb.close()
+    window.two_story_house_portal.bot_msg_lb.close()
+    window.movie = QMovie("images/gifs/glitch_gif.gif")
+    window.two_story_house_portal.bg_gif_lb.setMovie(window.movie)
+    window.movie.start()
+    timer = QTimer()
+    timer.singleShot(2000, lambda: enter_portal(window))
